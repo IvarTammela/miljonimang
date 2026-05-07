@@ -41,6 +41,12 @@ $letters = ['A', 'B', 'C', 'D'];
                 </p>
                 <p>Lõpptulemus: <strong><?= Game::formatPoints((int)$game['earned']) ?> punkti</strong></p>
                 <p>Mängija: <strong><?= e($game['player']) ?></strong></p>
+                <?php if (($game['status'] ?? '') === 'wrong' && $game['beforeDrop'] !== null && $game['beforeDrop'] !== $game['earned']): ?>
+                    <div class="notice">
+                        Enne valet vastust oli sul <?= Game::formatPoints((int)$game['beforeDrop']) ?> punkti.
+                        Kuna viimane saavutatud turvatase oli <?= Game::formatPoints((int)$game['safe']) ?> punkti, langes lõpptulemus sellele tasemele.
+                    </div>
+                <?php endif; ?>
                 <?php if (!empty($game['lastExplanation'])): ?>
                     <div class="notice">
                         Õige vastus oli <?= e($letters[$game['lastExplanation']['correctIndex']]) ?>.

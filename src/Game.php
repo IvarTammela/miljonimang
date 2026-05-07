@@ -26,6 +26,7 @@ class Game
             'hint' => null,
             'audience' => null,
             'lastExplanation' => null,
+            'beforeDrop' => null,
             'leaderboardSaved' => false,
         ];
     }
@@ -46,6 +47,7 @@ class Game
         ];
 
         if (!$correct) {
+            $game['beforeDrop'] = $game['earned'];
             $game['earned'] = $game['safe'];
             $game['finished'] = true;
             $game['status'] = 'wrong';

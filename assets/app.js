@@ -86,6 +86,7 @@ function startGame() {
         hint: null,
         audience: null,
         lastExplanation: null,
+        beforeDrop: null,
         saved: false,
     };
 
@@ -169,6 +170,12 @@ function renderResult() {
             <p class="result-status">${status}</p>
             <p>Lõpptulemus: <strong>${formatPoints(game.earned)} punkti</strong></p>
             <p>Mängija: <strong>${escapeHtml(game.player)}</strong></p>
+            ${game.status === 'wrong' && game.beforeDrop !== null && game.beforeDrop !== game.earned ? `
+                <div class="notice">
+                    Enne valet vastust oli sul ${formatPoints(game.beforeDrop)} punkti.
+                    Kuna viimane saavutatud turvatase oli ${formatPoints(game.safe)} punkti, langes lõpptulemus sellele tasemele.
+                </div>
+            ` : ''}
             ${game.lastExplanation ? `<div class="notice">${escapeHtml(game.lastExplanation)}</div>` : ''}
             <button class="primary" type="button" data-action="home">Tagasi avalehele</button>
         </div>
@@ -178,6 +185,7 @@ function renderResult() {
 function answer(index) {
     const question = game.questions[game.current];
     if (index !== question.correctIndex) {
+        game.beforeDrop = game.earned;
         game.earned = game.safe;
         game.finished = true;
         game.status = 'wrong';
