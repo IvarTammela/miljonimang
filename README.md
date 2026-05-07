@@ -1,5 +1,11 @@
 # Miljonimäng
 
+Avalik repositoorium: https://github.com/IvarTammela/miljonimang
+
+Avalik GitHub Pages demo: https://ivartammela.github.io/miljonimang/
+
+Kanban-tabel GitHub Projectsis: https://github.com/users/IvarTammela/projects/2
+
 ## Projekti kirjeldus
 
 Miljonimäng on AI-põhine ülesande valideerimise rakendus. Rakendus kontrollib, kas õppija mõistab valitud ülesande lahendust, esitades 15 valikvastustega küsimust ülesande kirjelduse ja lahendusfailide põhjal.
@@ -109,7 +115,7 @@ Projekt on jaotatud kasutajalugudeks failis `docs/backlog.md`. Esimese iteratsio
 
 Esimeses versioonis valmisid ülesannete valik, failide lugemine, küsimuste genereerimine, mänguloogika, õlekõrred, tulemuse kuvamine ja lihtne edetabel. Hilisemaks jäid kasutajate süsteem, õpetaja vaade ja veebiliidesest ülesannete lisamine.
 
-Kanban-tabel asub GitHub Projects keskkonnas: link lisatakse pärast avaliku repositooriumi loomist.
+Kanban-tabel asub GitHub Projects keskkonnas: https://github.com/users/IvarTammela/projects/2
 
 Nõuete täitmise ülevaade on failis `docs/requirements-coverage.md`. Projekti tagasivaade on failis `docs/retrospective.md`.
 
