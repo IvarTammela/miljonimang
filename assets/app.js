@@ -1,7 +1,6 @@
 const points = [100, 200, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000];
 const safeLevels = {5: 1000, 10: 32000, 15: 1000000};
 const letters = ['A', 'B', 'C', 'D'];
-const staticGame = {id: 'game', title: 'Miljonimäng'};
 const app = document.querySelector('#app');
 
 let bank = null;

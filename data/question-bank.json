@@ -5,40 +5,334 @@
       "title": "JavaScripti kalkulaator",
       "questions": {
         "easy": [
-          {"question":"Mis on JavaScripti kalkulaatori peamine eesmärk?","options":["Arvutada kasutaja sisestatud väärtuste põhjal tulemus","Muuta CSS automaatselt HTML-iks","Salvestada brauseri paroolid","Kustutada input kaust"],"correctIndex":0,"explanation":"Kalkulaatori ülesanne on võtta kasutaja sisend ja teha valitud arvutus.","hint":"Mõtle, mida kasutaja kalkulaatori lehel teha tahab."},
-          {"question":"Milleks kasutatakse HTML-is kahte number-tüüpi sisendvälja?","options":["Kahe arvu sisestamiseks","Lehe taustavärvi muutmiseks","JavaScripti faili laadimiseks","Andmebaasi loomiseks"],"correctIndex":0,"explanation":"Kalkulaator vajab kahte arvu, millega tehe teha.","hint":"Vaata, milliseid väärtusi arvutamiseks vaja on."},
-          {"question":"Mida teeb tehte valik kalkulaatoris?","options":["Määrab, millist arvutust kahe arvuga tehakse","Valib kasutaja nime","Muudab HTML faili asukohta","Keelab kõik nupud"],"correctIndex":0,"explanation":"Valik määrab, kas tehakse liitmine, lahutamine, korrutamine või jagamine.","hint":"Mõtle plussile, miinusele, korrutamisele ja jagamisele."},
-          {"question":"Miks on kalkulaatoris arvutamise nupp?","options":["Et kasutaja tegevus käivitaks arvutusloogika","Et CSS fail sulgeda","Et JSON fail alla laadida","Et sisendväljad kaoksid"],"correctIndex":0,"explanation":"Nupu vajutamine annab hetke, mil JavaScript peab sisendi lugema ja tulemuse arvutama.","hint":"Mõtle kasutaja tegevusele."},
-          {"question":"Kuhu kuvatakse kalkulaatori tulemus?","options":["Samale veebilehele tulemuse elemendi sisse","Ainult serveri logisse","Brauseri aadressiribale","GitHubi issue nimekirja"],"correctIndex":0,"explanation":"Ülesanne nõuab, et tulemus oleks kasutajale lehel nähtav.","hint":"Kasutaja peab vastust kohe nägema."},
-          {"question":"Miks peab jagamisel nulliga kuvama veateate?","options":["Nulliga jagamine pole tavalises arvutuses lubatud","Sest null on alati tekst","Sest CSS ei toeta nulli","Sest HTML ei luba numbrit 0"],"correctIndex":0,"explanation":"Nulliga jagamine tekitaks vigase või lõpmatu tulemuse, seega peab kasutajat hoiatama.","hint":"Mõtle jagamistehte erijuhtumile."},
-          {"question":"Mis on faili script.js roll selles lahenduses?","options":["Hoida kalkulaatori JavaScripti loogikat","Kirjeldada ainult lehe värve","Asendada assignment.md fail","Salvestada pildid"],"correctIndex":0,"explanation":"script.js sisaldab sisendi lugemist, kontrolli ja arvutamist.","hint":"Faililaiend .js viitab JavaScriptile."},
-          {"question":"Mis on faili style.css roll kalkulaatoris?","options":["Lehe välimuse kujundamine","Arvutuste tegemine","Kasutaja sisendi valideerimine","Punktiredeli salvestamine"],"correctIndex":0,"explanation":"CSS vastutab kujunduse, mitte arvutusloogika eest.","hint":"Mõtle stiilidele ja paigutusele."},
-          {"question":"Miks peab kasutaja sisestama mõlemad arvud?","options":["Tehte tegemiseks on vaja kahte operandit","Sest HTML vajab alati kahte pealkirja","Sest CSS nõuab kahte faili","Sest tulemus peab olema alati tühi"],"correctIndex":0,"explanation":"Liitmine, lahutamine, korrutamine ja jagamine vajavad selles ülesandes kahte arvu.","hint":"Mõtle matemaatilisele tehtele."},
-          {"question":"Mida tähendab valikvastustega küsimuses üks õige vastus?","options":["Rakendus saab vastuse üheselt õigeks või valeks hinnata","Kõik vastused annavad punkte","Vastust ei kontrollita","Kasutaja peab kirjutama pika teksti"],"correctIndex":0,"explanation":"Miljonimängu loogika eeldab ühte õiget varianti.","hint":"Mõtle mängu kontrollitavusele."}
+          {
+            "question": "Milline kirjeldus võtab kõige täpsemalt kokku JavaScripti kalkulaatori ülesande eesmärgi?",
+            "options": [
+              "Kasutaja sisestab arvud ja rakendus arvutab valitud tehte tulemuse.",
+              "Kasutaja valib kujunduse ja rakendus muudab vormi visuaalset paigutust.",
+              "Kasutaja lisab andmed nimekirja ja rakendus kuvab need tabelina.",
+              "Kasutaja avab lehe ja rakendus kontrollib ainult failide olemasolu."
+            ],
+            "correctIndex": 0,
+            "explanation": "Ülesande põhisisu on kahe arvu, tehte valiku ja tulemuse kuvamise loogika.",
+            "hint": "Mõtle, milline variant kirjeldab nii sisendit, tehet kui tulemust."
+          },
+          {
+            "question": "Miks on kalkulaatori vormis vaja kahte arvu sisestamise välja?",
+            "options": [
+              "Sest valitud aritmeetiline tehe tehakse kahe kasutaja antud väärtusega.",
+              "Sest üks väli hoiab tulemust ja teine väli hoiab veateate teksti.",
+              "Sest brauser vajab iga nupu jaoks eraldi numbrilist sisendvälja.",
+              "Sest JavaScript saab sündmusi kuulata ainult kahe sisendi olemasolul."
+            ],
+            "correctIndex": 0,
+            "explanation": "Liitmine, lahutamine, korrutamine ja jagamine vajavad selles lahenduses kahte operandit.",
+            "hint": "Vaata, milliseid väärtusi arvutamiseks tegelikult kasutatakse."
+          },
+          {
+            "question": "Millist rolli täidab tehte valiku element kalkulaatori töövoos?",
+            "options": [
+              "See määrab, millist arvutusreeglit sisestatud arvudele rakendatakse.",
+              "See määrab, millises HTML elemendis veateadet lõpuks näidatakse.",
+              "See määrab, kas sisendväljade väärtused loetakse tekstina või arvuna.",
+              "See määrab, millal brauser JavaScripti faili uuesti alla laadib."
+            ],
+            "correctIndex": 0,
+            "explanation": "Tehte valik seob kasutaja otsuse konkreetse arvutusloogikaga.",
+            "hint": "Mõtle, miks on vaja teada, kas kasutaja valis +, -, * või /."
+          },
+          {
+            "question": "Miks on lahenduses oluline arvutamise nupu vajutus?",
+            "options": [
+              "See on kasutaja tegevus, mille peale loetakse sisendid ja arvutatakse tulemus.",
+              "See on kujunduselement, mille järgi otsustatakse sisendväljade laius.",
+              "See on kontrollpunkt, mis muudab kõik sisestatud väärtused automaatselt õigeks.",
+              "See on brauseri signaal, mis salvestab JavaScripti faili püsivalt mällu."
+            ],
+            "correctIndex": 0,
+            "explanation": "Nupu vajutus käivitab sündmusekäsitleja, kus tehakse sisendi lugemine ja arvutamine.",
+            "hint": "Mõtle, mis hetkel peaks arvutus päriselt algama."
+          },
+          {
+            "question": "Miks peab tulemus või veateade ilmuma samale veebilehele?",
+            "options": [
+              "Kasutaja peab saama kohe tagasisidet selle kohta, mida tema sisendiga tehti.",
+              "Rakendus peab vältima seda, et JavaScript saaks HTML elemente muuta.",
+              "Kasutaja peab nägema ainult viimast sisestatud arvu, mitte arvutuse tulemust.",
+              "Rakendus peab jätma tulemuse peidetuks, kuni leht käsitsi uuesti avatakse."
+            ],
+            "correctIndex": 0,
+            "explanation": "Assignment nõuab kasutajale nähtavat tulemust või arusaadavat veateadet.",
+            "hint": "Mõtle kasutaja tagasisidele pärast nupu vajutamist."
+          },
+          {
+            "question": "Milline väide kirjeldab kõige paremini faili `script.js` vastutust?",
+            "options": [
+              "See sisaldab kasutaja sisendi lugemist, kontrollimist ja tulemuse arvutamist.",
+              "See sisaldab peamiselt lehe ruudustikku, vahesid ja sisendväljade kujundust.",
+              "See sisaldab ülesande püstitust, hindamiskriteeriume ja töö kirjeldust.",
+              "See sisaldab staatilist toodete nimekirja ja selle kategooriate kuvamist."
+            ],
+            "correctIndex": 0,
+            "explanation": "`script.js` on selles ülesandes kalkulaatori käitumise ja loogika fail.",
+            "hint": "Mõtle, millises failis peaks olema brauseris käivitatav loogika."
+          },
+          {
+            "question": "Miks ei piisa kalkulaatori hindamisel ainult sellest, et HTML fail on olemas?",
+            "options": [
+              "Sest ülesanne nõuab töötavat sisendi lugemist, arvutamist ja vigade käsitlemist.",
+              "Sest HTML fail peab sisaldama kõiki JavaScripti funktsioone ilma eraldi failita.",
+              "Sest hindamisel loetakse ainult CSS reegleid ja visuaalseid paigutusi.",
+              "Sest kalkulaatori puhul kontrollitakse üksnes failinimede kokkulangevust."
+            ],
+            "correctIndex": 0,
+            "explanation": "Eesmärk on kontrollida lahenduse käitumist ja arusaamist, mitte ainult failide olemasolu.",
+            "hint": "Mõtle, mida kasutaja peaks kalkulaatoriga teha saama."
+          },
+          {
+            "question": "Milline käitumine vastab kõige paremini jagamise erijuhtumi nõudele?",
+            "options": [
+              "Kui teine arv on null, kuvatakse tulemuse asemel selge veateade.",
+              "Kui teine arv on null, teisendatakse see automaatselt üheks ja arvutus jätkub.",
+              "Kui teine arv on null, jäetakse vastus tühjaks ja kasutajale midagi ei öelda.",
+              "Kui teine arv on null, vahetatakse valitud tehe automaatselt liitmiseks."
+            ],
+            "correctIndex": 0,
+            "explanation": "Nulliga jagamine tuleb eraldi kinni püüda ja kasutajale arusaadavalt selgitada.",
+            "hint": "Mõtle, milline variant käsitleb erijuhtumit ausalt."
+          },
+          {
+            "question": "Milline vastus kirjeldab kõige paremini valikvastustega kontrolli mõtet selles rakenduses?",
+            "options": [
+              "Küsimus peab kontrollima, kas õppija mõistab lahenduse loogikat ja nõudeid.",
+              "Küsimus peab kontrollima, kas õppija mäletab ainult faili täpset salvestusaega.",
+              "Küsimus peab kontrollima, kas õppija oskab ära arvata kõige pikema vastuse.",
+              "Küsimus peab kontrollima, kas õppija tunneb kõiki brauseri sisemisi sätteid."
+            ],
+            "correctIndex": 0,
+            "explanation": "Rakenduse eesmärk on arusaamise kontroll, mitte juhusliku või ebaolulise info mäletamine.",
+            "hint": "Mõtle, milline variant seostub ülesande eesmärgiga."
+          }
         ],
         "medium": [
-          {"question":"Miks kasutatakse Number() teisendust enne arvutamist?","options":["Sisendvälja väärtus tuleb brauserist tekstina ja see tuleb arvuks muuta","CSS nõuab kõigi väärtuste teisendamist pildiks","Number() muudab nupu nähtamatuks","Number() salvestab tulemuse andmebaasi"],"correctIndex":0,"explanation":"HTML sisendi value on string; arvutamiseks tuleb see numbriks teisendada.","hint":"Mõtle stringi ja arvu erinevusele."},
-          {"question":"Mida kontrollib Number.isNaN selles lahenduses?","options":["Kas sisendist saadud väärtus ei ole korrektne arv","Kas CSS fail on olemas","Kas brauser on täisekraanil","Kas kasutaja valis õlekõrre"],"correctIndex":0,"explanation":"Number.isNaN aitab leida vigase arvulise sisendi.","hint":"NaN tähendab Not a Number."},
-          {"question":"Miks kasutatakse addEventListener meetodit arvutamise nupul?","options":["Et reageerida kasutaja nupuvajutusele","Et muuta JavaScript CSS-iks","Et assignment.md kustutada","Et tulemus enne sisestust arvutada"],"correctIndex":0,"explanation":"addEventListener seob sündmuse ja sellele vastava funktsiooni.","hint":"Mõtle sündmuse kuulamisele."},
-          {"question":"Mis võib juhtuda, kui document.querySelector ei leia elementi?","options":["Tagastub null ja selle kasutamine võib põhjustada vea","Element luuakse automaatselt õigesse kohta","CSS parandab vea","Arvutus annab alati 0"],"correctIndex":0,"explanation":"Puuduvale elemendile meetodite või omaduste kasutamine võib katkestada koodi.","hint":"Mõtle, mis väärtus tuleb puuduva elemendi korral."},
-          {"question":"Miks on jagamise nullikontroll enne arvutuse tegemist?","options":["Et vältida vigast jagamistehet enne tulemuse arvutamist","Et keelata kõik muud tehted","Et muuta teine arv alati üheks","Et HTML pealkiri muutuks"],"correctIndex":0,"explanation":"Erijuht tuleb kinni püüda enne jagamist.","hint":"Mõtle kontrollide järjekorrale."},
-          {"question":"Miks kasutatakse tulemusel textContent omadust?","options":["Teksti turvaliseks kuvamiseks HTML elementi","JavaScripti faili ümbernimetamiseks","CSS klasside eemaldamiseks","Brauseri sulgemiseks"],"correctIndex":0,"explanation":"textContent paneb elemendi sisse teksti ilma HTML-i tõlgendamata.","hint":"Mõtle teksti kuvamisele."},
-          {"question":"Mis eelis on arvutuste hoidmisel objektis võtmete add, subtract, multiply ja divide all?","options":["Valitud tehte järgi saab vastava arvutuse selgelt kätte","See keelab kasutaja sisendi","See muudab kõik tehted samaks","See teeb CSS-i kiiremaks"],"correctIndex":0,"explanation":"Objekt seob operaatori väärtuse konkreetse arvutusega.","hint":"Mõtle operatorInput.value kasutamisele."},
-          {"question":"Miks peab kasutajale vigase sisendi korral kohe return tegema?","options":["Et edasine arvutus ei jätkuks vigaste väärtustega","Et kõik teised funktsioonid kustutada","Et punktiredel avaneks","Et HTML laaditaks uuesti"],"correctIndex":0,"explanation":"Varajane return peatab funktsiooni, kui tingimused pole täidetud.","hint":"Mõtle, mis juhtub pärast veateadet."},
-          {"question":"Milline osa lahendusest loeb kasutaja valitud tehte?","options":["operatorInput.value","result.textContent","document.title","style.css"],"correctIndex":0,"explanation":"select elemendi value annab teada valitud tehte.","hint":"Mõtle select elemendile."},
-          {"question":"Miks on kalkulaatori loogika eraldi script.js failis parem kui HTML-i sisse segatuna?","options":["Koodi on lihtsam lugeda ja hooldada","CSS muutub automaatselt lühemaks","Brauser ei vaja enam HTML-i","Kõik sisendid muutuvad tekstiks"],"correctIndex":0,"explanation":"Eraldi fail hoiab struktuuri ja loogika lahus.","hint":"Mõtle vastutuste eraldamisele."}
+          {
+            "question": "Miks teisendatakse sisendväljade väärtused enne arvutamist numbriteks?",
+            "options": [
+              "Sest sisendi `value` loetakse tekstina ja aritmeetika vajab arvulisi väärtusi.",
+              "Sest brauser lubab nupuvajutust käsitleda ainult numbriliste väärtuste korral.",
+              "Sest `select` elemendi väärtus muutub muidu automaatselt tühjaks stringiks.",
+              "Sest CSS kujundus rakendub ainult siis, kui sisendid on eelnevalt teisendatud."
+            ],
+            "correctIndex": 0,
+            "explanation": "HTML sisendi väärtus tuleb JavaScripti stringina; arvutamiseks tuleb see arvuks muuta.",
+            "hint": "Mõtle erinevusele väärtuste `\"2\" + \"3\"` ja `2 + 3` vahel."
+          },
+          {
+            "question": "Millist probleemi aitab `Number.isNaN` kontroll kalkulaatoris vältida?",
+            "options": [
+              "Arvutuse jätkamist olukorras, kus vähemalt üks sisend ei ole kasutatav arv.",
+              "Tehte valiku muutumist enne seda, kui kasutaja arvutamise nupule vajutab.",
+              "Tulemuse kuvamist vales CSS klassis pärast õnnestunud arvutust.",
+              "Seda, et brauser laadib JavaScripti faili mitu korda järjest."
+            ],
+            "correctIndex": 0,
+            "explanation": "`Number.isNaN` aitab katkestada arvutuse vigase arvulise sisendi korral.",
+            "hint": "Mõtle, mida tähendab väärtus NaN."
+          },
+          {
+            "question": "Milline põhjendus kirjeldab kõige täpsemalt `addEventListener` kasutamist?",
+            "options": [
+              "See seob arvutamise loogika kasutaja tehtud nupuvajutusega.",
+              "See teisendab sisestatud väärtused automaatselt sobivaks andmetüübiks.",
+              "See loob puuduva tulemuse elemendi, kui HTML-is seda olemas ei ole.",
+              "See takistab kasutajal jagamistehet enne sisendi kontrollimist valida."
+            ],
+            "correctIndex": 0,
+            "explanation": "`addEventListener` kuulab sündmust ja käivitab selle peale määratud funktsiooni.",
+            "hint": "Mõtle sündmuse ja sellele reageerimise seosele."
+          },
+          {
+            "question": "Mis on tõenäoline tagajärg, kui `document.querySelector('#result')` ei leia elementi?",
+            "options": [
+              "Tulemuse kuvamisel võib tekkida viga, sest kood kasutab olematut elementi.",
+              "Arvutus tehakse õigesti, kuid tulemus salvestatakse automaatselt brauseri mällu.",
+              "JavaScript loob tulemuse elemendi ise ja lisab selle vormi lõppu.",
+              "Valitud tehe muudetakse vaikimisi liitmiseks ning kasutaja saab hoiatuse."
+            ],
+            "correctIndex": 0,
+            "explanation": "Kui element puudub, on muutuja väärtus `null` ja selle omaduste kasutamine võib koodi katkestada.",
+            "hint": "Mõtle, mida `querySelector` tagastab, kui vastet ei leita."
+          },
+          {
+            "question": "Miks tehakse nulliga jagamise kontroll enne lõpliku vastuse määramist?",
+            "options": [
+              "Erijuht tuleb peatada enne, kui arvutus annaks kasutajale eksitava tulemuse.",
+              "Jagamise kontroll peab alati toimuma pärast tulemuse kuvamist kasutajale.",
+              "Nulliga jagamine parandatakse kõige lihtsamalt pärast vastuse ümardamist.",
+              "Tehte kontrolli pole vaja teha, kui sisendid on juba numbriteks teisendatud."
+            ],
+            "correctIndex": 0,
+            "explanation": "Vigane olukord tuleb kinni püüda enne tulemuse arvutamist ja kuvamist.",
+            "hint": "Mõtle kontrollide järjekorrale funktsioonis."
+          },
+          {
+            "question": "Miks on `textContent` tulemuse kuvamiseks sobivam kui kasutaja sisendi otse HTML-ina lisamine?",
+            "options": [
+              "See kuvab väärtuse tekstina ega tõlgenda seda uue HTML struktuurina.",
+              "See vormindab sisendi automaatselt kahe komakohaga rahasummaks.",
+              "See kontrollib enne kuvamist, kas mõlemad sisendid on täisarvud.",
+              "See loob tulemuse jaoks eraldi sündmusekuulaja igal nupuvajutusel."
+            ],
+            "correctIndex": 0,
+            "explanation": "`textContent` vähendab riski, et sisendit käsitletakse HTML märgendina.",
+            "hint": "Mõtle teksti ja HTML-i tõlgendamise erinevusele."
+          },
+          {
+            "question": "Milline lahenduse osa seob kasutaja valitud tehte konkreetse arvutusega?",
+            "options": [
+              "Operaatori väärtust kasutatakse vastava arvutusreegli valimiseks.",
+              "Tulemuse tekst määrab, millise arvutuse kasutaja tegelikult valis.",
+              "CSS paigutus otsustab, kas arvud liidetakse või korrutatakse.",
+              "Sisendvälja placeholder määrab arvutuse enne kasutaja valikut."
+            ],
+            "correctIndex": 0,
+            "explanation": "Tehte valikust loetud väärtus juhib, milline arvutus kahe arvuga tehakse.",
+            "hint": "Mõtle `operatorInput.value` kasutamisele."
+          },
+          {
+            "question": "Miks on varajane `return` vigase sisendi korral mõistlik lahendus?",
+            "options": [
+              "See peatab funktsiooni enne, kui kood jõuab vigaste väärtustega arvutada.",
+              "See käivitab sama sündmuse uuesti, et kasutaja ei peaks nuppu vajutama.",
+              "See muudab sisendväljade tüübi automaatselt tekstist numbriks.",
+              "See salvestab pooleli oleva arvutuse hilisemaks jätkamiseks."
+            ],
+            "correctIndex": 0,
+            "explanation": "Kui sisend on vigane, ei tohiks funktsioon jätkata tavapärast arvutusvoogu.",
+            "hint": "Mõtle, mis juhtuks, kui veateatest hoolimata arvutus jätkuks."
+          },
+          {
+            "question": "Miks on arvutusloogika eraldi JavaScripti failis hooldatavam kui HTML-i sisse kirjutatuna?",
+            "options": [
+              "Käitumise loogika on eraldi struktuurist ja seda on lihtsam muuta.",
+              "Brauser käivitab eraldi faili alati kiiremini kui HTML-i sees oleva koodi.",
+              "Eraldi fail muudab kõik sisendkontrollid automaatselt korrektseks.",
+              "HTML ei saa tehniliselt sisaldada ühtegi sündmuse või nupu kirjeldust."
+            ],
+            "correctIndex": 0,
+            "explanation": "Eraldi vastutused teevad koodi loetavamaks ja edasiarendatavaks.",
+            "hint": "Mõtle HTML struktuuri ja JavaScripti käitumise rollidele."
+          }
         ],
         "hard": [
-          {"question":"Mis risk tekiks, kui kasutaja sisend lisataks tulemusse innerHTML abil?","options":["Pahatahtlik HTML või skript võiks lehele jõuda","Arvutus muutuks alati täpsemaks","CSS ei töötaks enam üldse","Number() hakkaks teksti tõlkima"],"correctIndex":0,"explanation":"Kasutaja sisendi otse innerHTML-i panemine võib tekitada XSS riski.","hint":"Mõtle HTML-i tõlgendamisele."},
-          {"question":"Kuidas muuta kalkulaatorit nii, et uusi tehteid oleks lihtsam lisada?","options":["Hoida tehted eraldi objektis või funktsioonide mapis","Kirjutada kõik arvutused HTML pealkirja sisse","Eemaldada operator select","Keelata JavaScript"],"correctIndex":0,"explanation":"Tehete eraldamine mapiks teeb laiendamise lihtsamaks.","hint":"Mõtle avatud laiendamisele."},
-          {"question":"Mis probleem võib tekkida, kui kõik DOM elemendid otsitakse globaalselt kohe faili laadimisel?","options":["Kui skript laetakse enne HTML elemente, võivad valikud olla null","Leht muutub automaatselt serveriks","CSS fail muutub JSON-iks","Kõik sisendid saavad sama väärtuse"],"correctIndex":0,"explanation":"Skripti laadimise järjekord peab tagama, et DOM elemendid on olemas.","hint":"Mõtle script tagi asukohale."},
-          {"question":"Miks võiks arvutusloogika eraldi funktsioon olla parem?","options":["Seda saaks lihtsamalt testida ilma DOM-ist sõltumata","See muudaks kõik vastused valeks","See keelaks veateated","See eemaldaks HTML vajaduse"],"correctIndex":0,"explanation":"Puhas arvutusfunktsioon on korduvkasutatav ja testitav.","hint":"Mõtle DOM-i ja matemaatika eraldamisele."},
-          {"question":"Kuidas parandada kasutajakogemust pärast veateadet?","options":["Näidata selget teadet ja jätta sisestatud väärtused alles","Kustutada kogu vorm ilma selgituseta","Sulgeda brauser","Peita arvutamise nupp igaveseks"],"correctIndex":0,"explanation":"Kasutaja peaks saama vea parandada ilma kõike uuesti alustamata.","hint":"Mõtle kasutaja järgmisele sammule."},
-          {"question":"Miks on floating point arvutused JavaScriptis mõnikord ebatäpsed?","options":["Murdarve hoitakse binaarses ujukomavormingus","CSS ümardab kõik arvud","HTML keelab kümnendkohad","addEventListener muudab arve"],"correctIndex":0,"explanation":"JavaScripti number tüüp kasutab IEEE 754 ujukomaarve.","hint":"Mõtle kümnendmurdude sisemisele esitusele."},
-          {"question":"Milline test aitaks kontrollida jagamise erijuhtu?","options":["Sisesta teine arv 0 ja vali jagamine","Sisesta ainult CSS värv","Ava leht ilma brauserita","Kustuta kõik option elemendid"],"correctIndex":0,"explanation":"Nulliga jagamise nõue vajab eraldi testjuhtu.","hint":"Mõtle hindamiskriteeriumi erijuhtumile."},
-          {"question":"Miks peaks kalkulaatoris vigade tekst olema kasutajale arusaadav?","options":["Õppija peab teadma, mida parandada","Sest veateade asendab kõik arvutused","Sest brauser nõuab eestikeelset teksti","Sest CSS ei kuva numbreid"],"correctIndex":0,"explanation":"Hea veateade aitab kasutajal sisendit parandada.","hint":"Mõtle kasutajatoele."},
-          {"question":"Mis oleks parem lahendus, kui tehted muutuksid keerukamaks?","options":["Luua eraldi funktsioonid iga tehte jaoks","Kirjutada kõik ühte pikka if-lausesse ilma nimedeta","Eemaldada sisendite kontroll","Peita tulemus"],"correctIndex":0,"explanation":"Nimetatud funktsioonid teevad keeruka loogika loetavamaks.","hint":"Mõtle hooldatavusele."},
-          {"question":"Kuidas hinnata, kas lahendus vastab assignment.md nõuetele?","options":["Võrrelda iga nõuet nähtava funktsionaalsuse ja koodiga","Vaadata ainult faili suurust","Kontrollida ainult pealkirja värvi","Lugeda ainult README esimest rida"],"correctIndex":0,"explanation":"Hindamine peab lähtuma nõuetest ja tegelikust käitumisest.","hint":"Mõtle vastuvõtutingimustele."}
+          {
+            "question": "Milline turvarisk tekiks, kui kasutaja sisend kuvataks tulemuses otse `innerHTML` kaudu?",
+            "options": [
+              "Sisend võib sisaldada HTML-i, mida brauser hakkab lehe osana tõlgendama.",
+              "Sisend võib muuta aritmeetilise tehte alati ümardatud täisarvuks.",
+              "Sisend võib takistada `Number()` funktsioonil stringi arvuks teisendada.",
+              "Sisend võib muuta `addEventListener` kuulaja ühekordselt käivitatavaks."
+            ],
+            "correctIndex": 0,
+            "explanation": "Kasutaja sisendi HTML-ina tõlgendamine võib avada XSS-laadse riski.",
+            "hint": "Mõtle, mis vahe on teksti kuvamisel ja HTML-i lisamisel."
+          },
+          {
+            "question": "Kuidas oleks kalkulaatori arvutusloogikat kõige mõistlikum edasi arendada, kui tehteid tuleb juurde?",
+            "options": [
+              "Hoida tehted eraldi funktsioonides või mapis, mida saab laiendada.",
+              "Lisada iga uue tehte jaoks eraldi koopia kogu nupuvajutuse loogikast.",
+              "Kirjutada kõik tehted ühte pikenevasse tulemuse teksti moodustamisse.",
+              "Jätta tehte valik muutmata ja otsustada arvutus sisendvälja pikkuse järgi."
+            ],
+            "correctIndex": 0,
+            "explanation": "Eraldi funktsioonid või map vähendavad kordust ja teevad laiendamise lihtsamaks.",
+            "hint": "Mõtle, mis juhtub koodiga viie või kuue tehte lisamisel."
+          },
+          {
+            "question": "Milline probleem võib tekkida, kui DOM elemendid otsitakse enne nende HTML-is olemas olemist?",
+            "options": [
+              "Muutujatesse võib sattuda `null`, mistõttu hilisem sündmuse või teksti määramine ebaõnnestub.",
+              "Muutujad saavad automaatselt eelmise lehe samanimeliste elementide väärtused.",
+              "Brauser teisendab kõik hiljem loodud elemendid vaikimisi numbriväljadeks.",
+              "Sündmusekuulajad lisatakse küll õigesti, kuid arvutuse tulemus muutub nulliks."
+            ],
+            "correctIndex": 0,
+            "explanation": "Skripti laadimise järjekord peab tagama, et vajalikud DOM elemendid on olemas.",
+            "hint": "Mõtle, miks script tag on sageli body lõpus või DOMContentLoaded sees."
+          },
+          {
+            "question": "Miks võiks puhas arvutusfunktsioon olla parem kui kogu loogika hoidmine nupuvajutuse sees?",
+            "options": [
+              "Seda saab testida eraldi, ilma et oleks vaja HTML elemente või brauserisündmust.",
+              "See muudab kõik sisendväärtused enne kontrollimist automaatselt kehtivaks.",
+              "See välistab vajaduse eraldi veateadete ja kasutaja tagasiside järele.",
+              "See paneb brauseri valima tehte sisestatud arvude suuruse põhjal."
+            ],
+            "correctIndex": 0,
+            "explanation": "Puhas arvutusfunktsioon teeb matemaatilise osa taaskasutatavaks ja testitavaks.",
+            "hint": "Mõtle, millist osa saaks kontrollida ilma DOM-ita."
+          },
+          {
+            "question": "Milline testjuhtum kontrollib kõige paremini, et lahendus käsitleb jagamise erijuhtu õigesti?",
+            "options": [
+              "Sisesta esimene arv, vali jagamine ja kasuta teise arvuna nulli.",
+              "Sisesta kaks positiivset arvu ja vali tehteks tavaline liitmine.",
+              "Jäta tehte valik muutmata ja kontrolli ainult vormi kujundust.",
+              "Sisesta kaks väärtust ning vaata, kas lehe pealkiri jääb samaks."
+            ],
+            "correctIndex": 0,
+            "explanation": "Nulliga jagamise nõue vajab otsest testjuhtu, mis selle olukorra käivitab.",
+            "hint": "Mõtle, milline sisend viib just nõutud erijuhtumini."
+          },
+          {
+            "question": "Miks võib JavaScripti murdarvudega arvutamine anda mõnikord ootamatu komakohaga tulemuse?",
+            "options": [
+              "Arvud salvestatakse ujukomavormingus, mis ei esita kõiki kümnendmurde täpselt.",
+              "Brauser ümardab kõik kasutaja sisestatud arvud enne JavaScriptile andmist.",
+              "HTML number-väli teisendab komakohaga väärtused alati tekstiks `NaN`.",
+              "Sündmusekuulaja käivitub murdarvude korral mitu korda järjest."
+            ],
+            "correctIndex": 0,
+            "explanation": "JavaScript kasutab IEEE 754 ujukomaarve, mille tõttu osa kümnendmurde pole täpsed.",
+            "hint": "Mõtle näiteks 0.1 + 0.2 tüüpi arvutustele."
+          },
+          {
+            "question": "Milline muudatus parandaks kalkulaatori koodi testitavust kõige rohkem?",
+            "options": [
+              "Eraldada sisendi valideerimine ja arvutamine DOM-i uuendavast koodist.",
+              "Liigutada kogu JavaScript HTML atribuudi sisse nupu külge.",
+              "Asendada kõik veateated ühe üldise tühja tulemusega.",
+              "Siduda iga arvutus CSS klassi nime pikkusega."
+            ],
+            "correctIndex": 0,
+            "explanation": "Testitavus paraneb, kui loogika ei sõltu otseselt DOM elementidest.",
+            "hint": "Mõtle, millist osa saaks käivitada automaattestis."
+          },
+          {
+            "question": "Kuidas hinnata, kas kalkulaatori lahendus vastab assignment.md nõuetele, mitte ainult töötab juhuslikult?",
+            "options": [
+              "Võrrelda iga nõuet nähtava käitumise ja vastava koodiosaga.",
+              "Kontrollida ainult seda, kas projektis on vähemalt üks HTML fail.",
+              "Vaadata peamiselt, kas nupu tekst ja lehe pealkiri on sarnased.",
+              "Käivitada ainult üks edukas liitmistehe ja muud juhtumid vahele jätta."
+            ],
+            "correctIndex": 0,
+            "explanation": "Nõuetele vastavust saab hinnata ainult kõiki olulisi tingimusi kontrollides.",
+            "hint": "Mõtle hindamiskriteeriumidele, mitte ainult ühele näitele."
+          },
+          {
+            "question": "Milline refaktor vähendaks kõige rohkem korduvat koodi veateadete ja tulemuse kuvamisel?",
+            "options": [
+              "Luua eraldi kuvamisfunktsioon, mis saab tekstina tulemuse või veateate.",
+              "Kirjutada iga võimaliku vea jaoks uus HTML element ja eraldi nupp.",
+              "Korrata `textContent` määramist igas harus ilma ühise abifunktsioonita.",
+              "Peita tulemuse element ja kasutada veateateid ainult konsoolilogis."
+            ],
+            "correctIndex": 0,
+            "explanation": "Ühine kuvamisfunktsioon vähendab kordust ja teeb muutmise lihtsamaks.",
+            "hint": "Mõtle, milline tegevus kordub nii vea kui tulemuse puhul."
+          }
         ]
       }
     },
@@ -47,40 +341,334 @@
       "title": "JSON-andmete kuvamine",
       "questions": {
         "easy": [
-          {"question":"Mis on JSON-andmete kuvamise ülesande eesmärk?","options":["Näidata andmetest kasutajale toodete nimekiri","Luua uus operatsioonisüsteem","Kustutada kõik HTML elemendid","Asendada brauser serveriga"],"correctIndex":0,"explanation":"Ülesanne keskendub andmete lugemisele ja kasutajale kuvamisele.","hint":"Mõtle toodete nimekirjale."},
-          {"question":"Millises failis asuvad ülesande järgi andmed?","options":["data.json","style.css","favicon.ico","README.lock"],"correctIndex":0,"explanation":"Nõuetes on öeldud, et andmed asuvad data.json failis.","hint":"Failinimi sisaldab sõna data."},
-          {"question":"Milliseid välju tuleb iga toote kohta kuvada?","options":["Nimi, hind ja kategooria","Ainult faili nimi","Brauseri versioon","Kasutaja parool"],"correctIndex":0,"explanation":"Assignment nõuab nime, hinna ja kategooria kuvamist.","hint":"Mõtle toote kirjeldamiseks vajalikele andmetele."},
-          {"question":"Mida peab rakendus tegema, kui tooteid ei ole?","options":["Kuvama tühja oleku teate","Sulgemа lehe","Andma automaatselt miljon punkti","Kustutama data.json faili"],"correctIndex":0,"explanation":"Tühjade andmete juhtum peab olema kasutajale arusaadav.","hint":"Mõtle kasutajale, kes vaatab tühja nimekirja."},
-          {"question":"Milleks kasutatakse app.js faili?","options":["Toodete kuvamise loogika hoidmiseks","Ainult värvide määramiseks","Piltide pakkimiseks","GitHubi konto muutmiseks"],"correctIndex":0,"explanation":"JavaScript fail sisaldab andmete töötlemist ja DOM-i uuendamist.","hint":"Faililaiend .js viitab JavaScriptile."},
-          {"question":"Mida tähendab DOM-i uuendamine?","options":["Veebilehe nähtava sisu muutmine JavaScriptiga","Serveri kõvaketta vormindamine","CSS faili allalaadimine","JSON-i muutmine pildiks"],"correctIndex":0,"explanation":"DOM on brauseri esitus HTML struktuurist.","hint":"Mõtle lehe elementidele."},
-          {"question":"Mis on massiiv toodete lahenduses?","options":["Mitme toote hoidmiseks kasutatav andmestruktuur","Üks CSS klass","Brauseri ajalugu","Ainult üks tekstirida"],"correctIndex":0,"explanation":"Tooted on loendina massiivis.","hint":"Mõtle mitmele objektile järjest."},
-          {"question":"Miks peab hind olema kasutajale loetavalt vormindatud?","options":["Et kasutaja mõistaks toote maksumust","Et JSON fail muutuks väiksemaks","Et kategooria kaoks","Et HTML ei laadiks"],"correctIndex":0,"explanation":"Hind on kasutajale oluline info ja peab olema selgelt kuvatud.","hint":"Mõtle toote kaardile või nimekirjareale."},
-          {"question":"Mida teeb renderProducts funktsioon?","options":["Kuvab toodete massiivi lehele","Laadib PHP serveri","Muudab kõik hinnad paroolideks","Kustutab kategooriad"],"correctIndex":0,"explanation":"Funktsioon vastutab toodete DOM-i lisamise eest.","hint":"Nimi render viitab kuvamisele."},
-          {"question":"Miks on väikesed funktsioonid kasulikud?","options":["Koodi on lihtsam lugeda ja muuta","Kõik vead kaovad automaatselt","HTML pole enam vajalik","JSON ei vaja enam andmeid"],"correctIndex":0,"explanation":"Väiksed funktsioonid annavad igale osale selge vastutuse.","hint":"Mõtle loetavusele."}
+          {
+            "question": "Milline kirjeldus võtab kõige täpsemalt kokku JSON-andmete kuvamise ülesande eesmärgi?",
+            "options": [
+              "Rakendus loeb struktureeritud tooteandmed ja kuvab need kasutajale nimekirjana.",
+              "Rakendus arvutab kahe sisestatud arvu põhjal valitud tehte tulemuse.",
+              "Rakendus kontrollib ainult seda, kas projektis leidub JavaScripti fail.",
+              "Rakendus võimaldab kasutajal muuta lehe kujundust ilma andmeid kuvamata."
+            ],
+            "correctIndex": 0,
+            "explanation": "Ülesanne keskendub andmete lugemisele ja nende arusaadaval kujul kuvamisele.",
+            "hint": "Mõtle, mis roll on tooteandmetel ja nimekirjal."
+          },
+          {
+            "question": "Miks on `data.json` selles ülesandes oluline fail?",
+            "options": [
+              "See on andmeallikas, mille põhjal toodete nimekiri tuleb koostada.",
+              "See on kujundusfail, mis määrab nimekirja värvid ja vahed.",
+              "See on käivitusfail, mis lisab sündmusekuulajad nuppudele.",
+              "See on dokumentatsioonifail, kus kirjeldatakse hindamiskriteeriume."
+            ],
+            "correctIndex": 0,
+            "explanation": "Assignment nõuab, et toodete andmed asuksid JSON failis.",
+            "hint": "Mõtle, milline fail sisaldab andmeid, mitte kujundust."
+          },
+          {
+            "question": "Millised andmed peab iga toote kohta kasutajale kuvama?",
+            "options": [
+              "Toote nime, hinna ja kategooria.",
+              "Toote faili nime, rea numbri ja CSS klassi.",
+              "Toote ID, brauseri versiooni ja laadimisaja.",
+              "Toote kirjelduse, lao koguse ja viimase muutmise aja."
+            ],
+            "correctIndex": 0,
+            "explanation": "Nõuetes on nimetatud nimi, hind ja kategooria.",
+            "hint": "Mõtle, milline info kirjeldab toodet kasutaja jaoks."
+          },
+          {
+            "question": "Miks peab lahendus käsitlema ka tühjade andmete olukorda?",
+            "options": [
+              "Kasutaja peab aru saama, et nimekiri on tühi, mitte rakendus katki.",
+              "Brauser kuvab tühja massiivi korral automaatselt vale veateate.",
+              "JSON fail ei saa tehniliselt sisaldada vähem kui kahte objekti.",
+              "Tühi andmestik peab muutuma automaatselt üheks näidistooteks."
+            ],
+            "correctIndex": 0,
+            "explanation": "Tühi olek on kasutajakogemuse ja nõuetele vastavuse osa.",
+            "hint": "Mõtle, mida kasutaja näeb, kui tooteid pole."
+          },
+          {
+            "question": "Millist rolli täidab `app.js` toodete kuvamise lahenduses?",
+            "options": [
+              "See sisaldab andmete töötlemist ja lehe sisu uuendamise loogikat.",
+              "See kirjeldab peamiselt nimekirja fonte, värve ja väliseid vahesid.",
+              "See sisaldab ülesande teksti, nõudeid ja vastuvõtutingimusi.",
+              "See hoiab ainult staatilist pealkirja, mida kasutaja ei näe."
+            ],
+            "correctIndex": 0,
+            "explanation": "`app.js` vastutab toodete massiivi töötlemise ja DOM-i muutmise eest.",
+            "hint": "Mõtle, millises failis peaks renderdamisloogika olema."
+          },
+          {
+            "question": "Mida tähendab DOM-i uuendamine toodete kuvamise kontekstis?",
+            "options": [
+              "JavaScript muudab lehe HTML struktuuri nii, et tooted muutuvad nähtavaks.",
+              "JavaScript muudab JSON faili sisu otse kasutaja arvutis püsivalt ära.",
+              "JavaScript muudab brauseri aadressiriba põhjal toote kategooriat.",
+              "JavaScript muudab CSS faili nime ja laeb kujunduse uuesti alla."
+            ],
+            "correctIndex": 0,
+            "explanation": "DOM-i uuendamine tähendab nähtava lehe elementide loomist või muutmist.",
+            "hint": "Mõtle, kuidas andmed jõuavad ekraanile."
+          },
+          {
+            "question": "Miks on toodete hoidmine massiivis selle ülesande jaoks sobiv?",
+            "options": [
+              "Mitu sarnase struktuuriga toodet saab järjest läbi käia ja kuvada.",
+              "Massiiv muudab iga toote hinna automaatselt õigesse valuutasse.",
+              "Massiiv välistab vajaduse kontrollida, kas andmeid üldse on.",
+              "Massiiv salvestab DOM elemendid püsivalt serveri andmebaasi."
+            ],
+            "correctIndex": 0,
+            "explanation": "Toodete loend sobib massiivina hoidmiseks ja itereerimiseks.",
+            "hint": "Mõtle mitme toote järjestikusele kuvamisele."
+          },
+          {
+            "question": "Miks on hinna vormindamine eraldi tähelepanu vajav osa?",
+            "options": [
+              "Kasutaja peab nägema hinda loetaval ja üheselt mõistetaval kujul.",
+              "Hind otsustab, millises järjekorras JavaScript failid laetakse.",
+              "Hind määrab, kas JSON objekt on üldse brauseris lubatud.",
+              "Hind asendab kategooria, kui toote nimi on liiga pikk."
+            ],
+            "correctIndex": 0,
+            "explanation": "Hind on kasutajale nähtav andmeväli ja selle esitus peab olema selge.",
+            "hint": "Mõtle, kuidas kasutaja tootereal hinda loeb."
+          },
+          {
+            "question": "Miks on väiksemate funktsioonide kasutamine selles lahenduses mõistlik?",
+            "options": [
+              "Iga funktsioon saab täita ühte selget osa andmete kuvamise töövoost.",
+              "Funktsioonid muudavad JSON faili automaatselt väiksemaks ja kiiremaks.",
+              "Funktsioonid välistavad vajaduse HTML elemente üldse kasutada.",
+              "Funktsioonid loovad tooted andmefaili asemel CSS reeglite põhjal."
+            ],
+            "correctIndex": 0,
+            "explanation": "Väikesed funktsioonid parandavad loetavust ja edasiarendatavust.",
+            "hint": "Mõtle vastutuste jagamisele."
+          }
         ],
         "medium": [
-          {"question":"Miks kasutatakse forEach meetodit toodete kuvamisel?","options":["Et teha iga toote kohta sama kuvamise tegevus","Et sorteerida CSS failid","Et sulgeda brauser","Et muuta JSON binaarfailiks"],"correctIndex":0,"explanation":"forEach käib massiivi elemendid ükshaaval läbi.","hint":"Mõtle kordusele üle toodete."},
-          {"question":"Miks tühjendatakse list.innerHTML enne renderdamist?","options":["Et vältida vanade kirjete dubleerimist","Et eemaldada data.json fail","Et muuta hind nulliks","Et keelata JavaScript"],"correctIndex":0,"explanation":"Enne uut renderdust eemaldatakse vana sisu.","hint":"Mõtle korduva renderdamise peale."},
-          {"question":"Miks on createElement turvalisem kui pika HTML stringi kokkupanek?","options":["See vähendab juhusliku või ohtliku HTML-i tõlgendamise riski","See teeb kõik tooted kallimaks","See keelab kategooriad","See töötab ainult CSS failis"],"correctIndex":0,"explanation":"DOM meetoditega saab luua elemente ilma kasutajaandmeid HTML-ina tõlgendamata.","hint":"Mõtle elementide loomisele."},
-          {"question":"Mida teeb appendChild lahenduses?","options":["Lisab loodud li elemendi nimekirja sisse","Kustutab viimase toote","Muudab hinna komakohad","Avab uue brauseriakna"],"correctIndex":0,"explanation":"appendChild lisab uue DOM elemendi vanema alla.","hint":"Mõtle lapselemendi lisamisele."},
-          {"question":"Miks kontrollitakse items.length väärtust?","options":["Et teada saada, kas kuvada tühi olek","Et muuta kõik hinnad tekstiks","Et sulgeda JSON fail","Et muuta list elemendi id"],"correctIndex":0,"explanation":"Pikkus 0 tähendab, et kuvada pole ühtegi toodet.","hint":"Mõtle tühjale massiivile."},
-          {"question":"Miks on formatPrice eraldi funktsioon?","options":["Hinna vorminduse loogika on ühes kohas","See loob automaatselt uued tooted","See eemaldab vajaduse renderdamiseks","See keelab kümnendkohad"],"correctIndex":0,"explanation":"Eraldi vormindusfunktsioon teeb koodi selgemaks ja korduvkasutatavaks.","hint":"Mõtle hinna esitusviisile."},
-          {"question":"Mis juhtub, kui #products elementi HTML-is pole?","options":["document.querySelector tagastab null ja listi kasutamine võib anda vea","Element luuakse automaatselt serveris","Kõik tooted kuvatakse aadressiribal","JSON parandab HTML-i"],"correctIndex":0,"explanation":"Puuduv DOM element võib renderdamise katkestada.","hint":"Mõtle querySelector tulemusele."},
-          {"question":"Miks peaks päris JSON faili laadimisel arvestama asünkroonsusega?","options":["Faili lugemine fetchiga ei pruugi lõppeda kohe","CSS värvid on alati aeglased","HTML ei toeta andmeid","forEach töötab ainult serveris"],"correctIndex":0,"explanation":"Võrgupäringud ja faililaadimine toimuvad asünkroonselt.","hint":"Mõtle fetch API-le."},
-          {"question":"Miks peab puuduvate andmete juhtum olema eraldi läbi mõeldud?","options":["Muidu võib kasutaja näha tühja või katkist vaadet","Sest tühi massiiv annab alati miljon punkti","Sest JSON ei luba tühja faili","Sest kategooria peab kaduma"],"correctIndex":0,"explanation":"Hea rakendus käsitleb ka tühje ja ootamatuid andmeid.","hint":"Mõtle erijuhtudele."},
-          {"question":"Miks on andmete ja kuvamise loogika eraldamine kasulik?","options":["Hiljem saab andmeallikat muuta ilma kogu vaadet ümber kirjutamata","See teeb kõik tooted samaks","See keelab edetabeli","See muudab brauseri keelt"],"correctIndex":0,"explanation":"Eraldus lihtsustab laiendamist ja testimist.","hint":"Mõtle tulevasele fetch kasutusele."}
+          {
+            "question": "Miks kasutatakse toodete kuvamisel massiivi läbimist, näiteks `forEach` tüüpi loogikat?",
+            "options": [
+              "Iga toote kohta tuleb teha sama renderdamise samm eraldi andmeobjekti põhjal.",
+              "Iga toode tuleb enne kuvamist teisendada eraldi CSS reegliks.",
+              "Iga toode peab käivitama uue brauserisündmuse enne lehe laadimist.",
+              "Iga toode peab muutma JSON faili nime vastavalt oma kategooriale."
+            ],
+            "correctIndex": 0,
+            "explanation": "Massiivi läbimine võimaldab sama kuvamisloogikat rakendada igale tootele.",
+            "hint": "Mõtle korduvatele andmeobjektidele."
+          },
+          {
+            "question": "Miks tühjendatakse nimekirja element enne toodete uuesti renderdamist?",
+            "options": [
+              "Et vältida olukorda, kus varasemad kirjed jäävad alles ja dubleeruvad.",
+              "Et JSON andmed saaksid pärast iga renderdust automaatselt uue struktuuri.",
+              "Et brauser lõpetaks kõigi varasemate JavaScript funktsioonide täitmise.",
+              "Et iga toote hind teisendataks enne kuvamist tagasi algväärtuseks."
+            ],
+            "correctIndex": 0,
+            "explanation": "Vana sisu eemaldamine hoiab korduva renderdamise kontrollitavana.",
+            "hint": "Mõtle, mis juhtuks teisel renderdamisel."
+          },
+          {
+            "question": "Miks võib DOM elementide loomine `createElement` abil olla parem kui kogu rea HTML stringina kokkupanek?",
+            "options": [
+              "See aitab andmeid tekstina käsitleda ja vähendab juhusliku HTML tõlgendamise riski.",
+              "See muudab kõik toodete hinnad automaatselt ühetaolise pikkusega tekstiks.",
+              "See lubab JSON faili lugeda ilma asünkroonse laadimisega arvestamata.",
+              "See välistab vajaduse kontrollida, kas nimekirja element on lehel olemas."
+            ],
+            "correctIndex": 0,
+            "explanation": "DOM meetodid aitavad luua elemente kontrollitumalt kui HTML stringide liitmine.",
+            "hint": "Mõtle turvalisele teksti lisamisele."
+          },
+          {
+            "question": "Mida teeb `appendChild` toodete nimekirja renderdamisel?",
+            "options": [
+              "Lisab loodud tooteelemendi olemasoleva nimekirja elemendi sisse.",
+              "Asendab kogu andmefaili uue tootega pärast iga läbikäiku.",
+              "Loeb toote hinna ja vormindab selle automaatselt valuutaks.",
+              "Kontrollib, kas massiivis on enne kuvamist vähemalt üks toode."
+            ],
+            "correctIndex": 0,
+            "explanation": "`appendChild` seob loodud elemendi nähtava DOM struktuuriga.",
+            "hint": "Mõtle vanema ja lapse elemendi suhtele."
+          },
+          {
+            "question": "Miks kontrollitakse enne renderdamist, kas toodete massiiv on tühi?",
+            "options": [
+              "Tühja loendi puhul tuleb kuvada teine kasutajateade kui toodete olemasolul.",
+              "Tühja loendi puhul peab brauser tooteandmed ise JSON failist taastama.",
+              "Tühja loendi puhul peab JavaScript valima automaatselt esimese kategooria.",
+              "Tühja loendi puhul tuleb renderdamisfunktsioon kindlasti mitu korda käivitada."
+            ],
+            "correctIndex": 0,
+            "explanation": "Tühja andmestiku kuvamine on eraldi kasutusjuht.",
+            "hint": "Mõtle, mida peaks kasutaja nägema ilma toodeteta."
+          },
+          {
+            "question": "Miks on `formatPrice` eraldi funktsioonina parem kui hinna vormindamine otse renderdamise sees?",
+            "options": [
+              "Hinna esitamise reeglit saab muuta ühes kohas ilma renderdusloogikat segamata.",
+              "Eraldi funktsioon muudab hinna alati väiksemaks ja kategooria alati suuremaks.",
+              "Eraldi funktsioon eemaldab vajaduse toote nime ja kategooriat kuvada.",
+              "Eraldi funktsioon paneb brauseri andmefaili automaatselt uuesti laadima."
+            ],
+            "correctIndex": 0,
+            "explanation": "Vorminduse eraldamine teeb koodi loetavamaks ja muudetavamaks.",
+            "hint": "Mõtle, mis muutuks, kui hinnale lisada teine valuuta vorming."
+          },
+          {
+            "question": "Mis võib juhtuda, kui `#products` elementi HTML-is ei ole, aga JavaScript eeldab selle olemasolu?",
+            "options": [
+              "Renderdamine võib katkeda, sest kood proovib kasutada `null` väärtust nimekirjana.",
+              "Tooted kuvatakse automaatselt body lõppu samas järjekorras nagu andmefailis.",
+              "JSON fail parandab puuduva elemendi enne JavaScripti käivitumist ise ära.",
+              "Brauser loob sama ID-ga elemendi, kui esimene toode massiivist läbi käiakse."
+            ],
+            "correctIndex": 0,
+            "explanation": "Puuduva DOM elemendi kasutamine võib põhjustada runtime vea.",
+            "hint": "Mõtle `querySelector` tagastatavale väärtusele."
+          },
+          {
+            "question": "Miks peab päris `data.json` laadimise korral arvestama asünkroonse töövooga?",
+            "options": [
+              "Faili laadimine võib lõppeda hiljem kui ülejäänud lehe JavaScripti käivitumine.",
+              "JSON fail teisendatakse brauseris alati enne laadimist CSS reegliteks.",
+              "Asünkroonsus tähendab, et massiivis saab olla ainult üks toode korraga.",
+              "Andmefaili laadimine peatab automaatselt kõik kasutaja sündmused lehel."
+            ],
+            "correctIndex": 0,
+            "explanation": "Välise faili lugemine `fetch`-iga toimub lubaduse või async/await töövoos.",
+            "hint": "Mõtle, miks `fetch` ei anna tulemust kohe sama rea peal."
+          },
+          {
+            "question": "Miks on andmete ettevalmistamine ja DOM-i muutmine kasulik eraldi hoida?",
+            "options": [
+              "Andmeloogikat saab hiljem testida või muuta ilma kogu vaadet ümber kirjutamata.",
+              "DOM-i muutmine peab alati toimuma enne, kui andmed üldse olemas on.",
+              "Andmete ettevalmistamine asendab vajaduse tühja oleku kuvamise järele.",
+              "Eraldus teeb iga toote kuvamise sõltuvaks ainult CSS klassi nimest."
+            ],
+            "correctIndex": 0,
+            "explanation": "Eraldatud vastutused toetavad testitavust ja edasiarendust.",
+            "hint": "Mõtle, mis muutuks, kui andmed tuleksid hiljem API-st."
+          }
         ],
         "hard": [
-          {"question":"Mis risk on list.innerHTML kasutamisel, kui andmed tulevad kasutajalt?","options":["Võib tekkida XSS risk, kui sisendit tõlgendatakse HTML-ina","Tooted sorteeritakse liiga kiiresti","Hinnad ümarduvad alati nulliks","CSS fail kustutatakse"],"correctIndex":0,"explanation":"Kasutajaandmete HTML-ina lisamine võib olla turvarisk.","hint":"Mõtle ohtlikule HTML sisule."},
-          {"question":"Kuidas muuta lahendus skaleeruvamaks, kui tooteid on tuhandeid?","options":["Lisada filtreerimine, leheküljed või virtuaalne renderdamine","Luua iga toote jaoks uus HTML fail käsitsi","Kustutada kategooriad","Näidata ainult esimest tähte"],"correctIndex":0,"explanation":"Suure andmehulga puhul peab vähendama korraga renderdatavat mahtu.","hint":"Mõtle jõudlusele."},
-          {"question":"Kuidas peaks lahendus käituma, kui data.json on vigane?","options":["Kuvama veateate ja mitte katkestama kogu kasutajaliidest","Sulgeda brauser ilma selgituseta","Näidata valesid hindu","Muuta kõik kategooriad parooliks"],"correctIndex":0,"explanation":"Vigased andmed vajavad käsitletavat veavoogu.","hint":"Mõtle try/catch või catch kasutusele."},
-          {"question":"Miks ei ole kõvakodeeritud products massiiv sama mis päris data.json lugemine?","options":["Kõvakodeeritud andmed ei testi failist laadimise nõuet","See on alati turvarisk","See keelab DOM-i","See ei saa sisaldada teksti"],"correctIndex":0,"explanation":"Assignment nõuab andmete asumist data.json failis.","hint":"Mõtle nõude ja lahenduse vastavusele."},
-          {"question":"Mis oleks hea viis kontrollida, kas iga toote objekt on korrektne?","options":["Valideerida name, price ja category olemasolu enne kuvamist","Eeldada, et kõik andmed on alati õiged","Kustutada vigane objekt vaikides ilma logita","Muuta kõik väljad üheks stringiks"],"correctIndex":0,"explanation":"Andmete valideerimine väldib katkist või eksitavat kuva.","hint":"Mõtle andmeskeemile."},
-          {"question":"Miks võib textContent olla parem kui innerHTML toote teksti kuvamiseks?","options":["textContent ei tõlgenda väärtust HTML-ina","textContent loob automaatselt tabeli","textContent laadib JSON faili","textContent sorteerib hinnad"],"correctIndex":0,"explanation":"Tekstina kuvamine vähendab HTML injection riski.","hint":"Mõtle teksti ja HTML erinevusele."},
-          {"question":"Kuidas teha renderProducts funktsiooni paremini testitavaks?","options":["Eraldada andmete vormindus DOM-i muutmisest","Lisada kõik loogika globaalsesse eventisse","Peita funktsiooni nimi","Kasutada ainult alert aknaid"],"correctIndex":0,"explanation":"Puhast andmetöötlust on lihtsam testida kui DOM kõrvalmõjusid.","hint":"Mõtle puhastele funktsioonidele."},
-          {"question":"Mis probleem tekib, kui tühja olekut kuvatakse sama list elemendi textContent abil ja hiljem lisatakse li elemente?","options":["Tuleb olla kindel, et vana tühja oleku tekst enne uut renderdust eemaldatakse","Kõik li elemendid muutuvad automaatselt piltideks","JSON fail muutub tühjaks","Hinnad kaotavad kümnendkohad"],"correctIndex":0,"explanation":"Renderdus peab vana sisu järjekindlalt puhastama.","hint":"Mõtle korduvrenderdusele."},
-          {"question":"Miks peaks toodete kuvamisel mõtlema ligipääsetavusele?","options":["Kasutajad ja abitehnoloogiad peavad nimekirja mõistma","See muudab API võtme avalikuks","See kustutab JSON faili","See keelab klaviatuuri"],"correctIndex":0,"explanation":"Semantiline nimekiri ja loetav tekst parandavad kasutatavust.","hint":"Mõtle li ja ul elementidele."},
-          {"question":"Kuidas hinnata, kas JSON lahendus vastab ülesande nõuetele?","options":["Kontrollida andmefaili, väljade kuvamist, tühja olekut ja funktsioonide jaotust","Vaadata ainult CSS ridade arvu","Kontrollida ainult faili loomise kuupäeva","Käivitada mäng ilma küsimusteta"],"correctIndex":0,"explanation":"Hindamine peab katma kõik assignment.md nõuded.","hint":"Mõtle vastuvõtutingimustele."}
+          {
+            "question": "Mis on peamine risk, kui tooteandmeid lisatakse lehele otse `innerHTML` abil?",
+            "options": [
+              "Andmetes olev HTML võib muutuda lehe struktuuriks või käivitatavaks sisuks.",
+              "Toodete hinnad ümardatakse automaatselt täisarvuks enne kuvamist.",
+              "Massiivi läbimine peatub pärast esimest edukalt kuvatud toodet.",
+              "Brauser keelab kategooriate kuvamise, kui tekst sisaldab tühikuid."
+            ],
+            "correctIndex": 0,
+            "explanation": "Usaldamata andmete HTML-ina lisamine võib olla turvarisk.",
+            "hint": "Mõtle, kas andmeid käsitletakse tekstina või HTML-ina."
+          },
+          {
+            "question": "Kuidas muuta toodete kuvamist paremini skaleeruvaks, kui andmeid on väga palju?",
+            "options": [
+              "Lisada filtreerimine, leheküljed või renderdada korraga ainult nähtav osa.",
+              "Lisada kõik tooted korraga DOM-i ja muuta iga rea stiil eraldi inline kujul.",
+              "Korrata sama nimekirja renderdamist mitu korda, et brauser saaks vahemälu kasutada.",
+              "Hoida kogu andmestik ühe pika tekstina ja otsida sealt tooteid käsitsi."
+            ],
+            "correctIndex": 0,
+            "explanation": "Suure andmehulga puhul on oluline piirata korraga töödeldavat ja kuvatavat mahtu.",
+            "hint": "Mõtle jõudlusele suure nimekirja korral."
+          },
+          {
+            "question": "Kuidas peaks lahendus käituma, kui `data.json` on vigane või seda ei saa laadida?",
+            "options": [
+              "Kuvada arusaadav veateade ja vältida kasutajaliidese vaikset katkemist.",
+              "Jätta leht tühjaks, sest vigane andmefail ei vaja kasutajale tagasisidet.",
+              "Asendada vigane fail automaatselt brauseri loodud näidisandmetega.",
+              "Kuvada ainult esimene toode ja peita kõik järgmised andmeread."
+            ],
+            "correctIndex": 0,
+            "explanation": "Vigase andmefaili korral peab veavoog olema kasutajale mõistetav.",
+            "hint": "Mõtle `catch` või veakäsitluse eesmärgile."
+          },
+          {
+            "question": "Miks ei täida kõvakodeeritud toodete massiiv täielikult nõuet, kui ülesanne ütleb, et andmed asuvad `data.json` failis?",
+            "options": [
+              "See ei tõenda, et lahendus oskab andmeid eraldi JSON failist lugeda.",
+              "See teeb toodete kuvamise alati aeglasemaks kui välise faili lugemine.",
+              "See takistab DOM elementide loomist `createElement` meetodi abil.",
+              "See muudab iga toote hinna brauseris automaatselt tekstiks `undefined`."
+            ],
+            "correctIndex": 0,
+            "explanation": "Kui nõue on lugeda `data.json`, ei piisa ainult koodi sisse kirjutatud massiivist.",
+            "hint": "Mõtle nõude ja tegeliku andmeallika erinevusele."
+          },
+          {
+            "question": "Milline kontroll parandaks tooteandmete usaldusväärsust enne kuvamist?",
+            "options": [
+              "Veenduda, et igal objektil on nimi, hind ja kategooria sobival kujul olemas.",
+              "Eeldada, et iga JSON objekt sisaldab alati kõiki vajalikke välju õigesti.",
+              "Kuvada puuduvad väärtused tühja tekstina ilma kasutajale või arendajale märku andmata.",
+              "Asendada kõik puuduvad väljad esimese toote vastavate väärtustega."
+            ],
+            "correctIndex": 0,
+            "explanation": "Andmeskeemi kontroll vähendab katkist või eksitavat kuvamist.",
+            "hint": "Mõtle, mis juhtub puuduvate väljadega."
+          },
+          {
+            "question": "Miks on `textContent` toote nime ja kategooria kuvamisel sageli turvalisem valik kui HTML string?",
+            "options": [
+              "See kohtleb väärtust tekstina ega lase andmetel HTML struktuuriks muutuda.",
+              "See muudab kõik kategooriad automaatselt väikeste tähtedega tekstiks.",
+              "See laeb andmefaili uuesti, kui tekstis leidub erimärke või tühikuid.",
+              "See kontrollib enne kuvamist, kas hind on suurem kui null."
+            ],
+            "correctIndex": 0,
+            "explanation": "`textContent` aitab vältida andmete tõlgendamist HTML märgenditena.",
+            "hint": "Mõtle kasutaja või välise faili andmete usaldusväärsusele."
+          },
+          {
+            "question": "Kuidas teha toodete renderdamise loogikat paremini automaatselt testitavaks?",
+            "options": [
+              "Eraldada andmete vormindamine DOM-i muutvast osast eraldi funktsioonidesse.",
+              "Kirjutada kõik renderdamise sammud ühte anonüümsesse funktsiooni ilma tagastuseta.",
+              "Sõltuda testides ainult sellest, milline CSS klass nimekirjal parajasti on.",
+              "Kontrollida testis ainult seda, kas JavaScript fail on projektis olemas."
+            ],
+            "correctIndex": 0,
+            "explanation": "Puhast vormindusloogikat saab testida lihtsamalt kui DOM kõrvalmõjusid.",
+            "hint": "Mõtle, mida saaks testida ilma brauseri päris DOM-ita."
+          },
+          {
+            "question": "Milline ligipääsetavuse kaalutlus on toodete nimekirja kuvamisel kõige asjakohasem?",
+            "options": [
+              "Kasutada semantilist nimekirja või selget struktuuri, mida abitehnoloogiad mõistavad.",
+              "Peita toote kategooria, sest ekraanilugejad loevad ainult hindu usaldusväärselt.",
+              "Kuvada kõik tooted ühe pika tekstireana, et DOM elemente oleks vähem.",
+              "Asendada nimekiri ühe tekstiplokiga, sest elemente oleks siis vähem."
+            ],
+            "correctIndex": 0,
+            "explanation": "Semantiline HTML aitab kasutajatel ja abitehnoloogiatel nimekirjast aru saada.",
+            "hint": "Mõtle, kuidas nimekiri on HTML-is tähenduslikult esitatud."
+          },
+          {
+            "question": "Kuidas hinnata, kas JSON-andmete kuvamise lahendus vastab assignment.md nõuetele?",
+            "options": [
+              "Kontrollida andmeallikat, väljade kuvamist, tühja olekut ja funktsioonide jaotust.",
+              "Kontrollida ainult seda, kas failis leidub vähemalt üks `forEach` kasutus.",
+              "Vaadata peamiselt, kas toodete tekst on visuaalselt piisavalt lühike.",
+              "Käivitada ainult näidisandmetega vaade ja jätta tühjad andmed proovimata."
+            ],
+            "correctIndex": 0,
+            "explanation": "Nõuetele vastavust tuleb hinnata kõigi oluliste tingimuste järgi.",
+            "hint": "Mõtle assignment.md nõuete kaupa kontrollimisele."
+          }
         ]
       }
     }
