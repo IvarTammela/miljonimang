@@ -43,7 +43,7 @@ Ava brauseris:
 http://localhost:8010
 ```
 
-Staatilises versioonis on üks mäng ja üks alustamise nupp. Küsimused on eelgenereeritud failis `data/question-bank.json`. Praegu on pangas 60 küsimust. Iga mäng valib neist 15 küsimust ehk 5 lihtsat, 5 keskmist ja 5 rasket. Edetabel salvestub kasutaja brauseri `localStorage`-isse.
+Staatilises versioonis on üks mäng, aga kasutaja saab valida, millise ülesande küsimustepangast mäng koostatakse. Küsimused on eelgenereeritud failis `data/question-bank.json`. Praegu on pangas 60 küsimust. Iga mäng valib valitud ülesande küsimustest 15 ehk 5 lihtsat, 5 keskmist ja 5 rasket. Edetabel salvestub kasutaja brauseri `localStorage`-isse.
 
 ### PHP / AI versioon
 

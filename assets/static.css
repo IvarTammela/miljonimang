@@ -24,7 +24,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
     font: inherit;
 }
 
@@ -116,7 +117,8 @@ h2 {
     font-weight: 700;
 }
 
-.field input {
+.field input,
+.field select {
     width: 100%;
     min-height: 46px;
     border: 1px solid var(--line);

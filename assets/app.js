@@ -40,10 +40,18 @@ function renderHome() {
                 <span>Mängija nimi</span>
                 <input id="player" type="text" maxlength="40" placeholder="Anonüümne">
             </label>
+            <label class="field">
+                <span>Vali ülesanne</span>
+                <select id="task">
+                    ${bank.tasks.map((task) => `
+                        <option value="${escapeHtml(task.id)}">${escapeHtml(task.id)} - ${escapeHtml(task.title)}</option>
+                    `).join('')}
+                </select>
+            </label>
             <div class="start-card">
                 <div>
                     <strong>Miljonimäng</strong>
-                    <span class="muted">${questionCount()} küsimust pangas</span>
+                    <span class="muted">Mäng valib valitud ülesande küsimustepangast 15 küsimust.</span>
                 </div>
                 <button class="primary" type="button" data-start>Alusta mängu</button>
             </div>
@@ -55,16 +63,17 @@ function renderHome() {
 }
 
 function startGame() {
-    const questions = combinedQuestions();
+    const taskId = document.querySelector('#task').value;
+    const task = bank.tasks.find((item) => item.id === taskId);
     const player = document.querySelector('#player').value.trim() || 'Anonüümne';
     const selected = [
-        ...takeRandom(questions.easy, 5),
-        ...takeRandom(questions.medium, 5),
-        ...takeRandom(questions.hard, 5),
+        ...takeRandom(task.questions.easy, 5),
+        ...takeRandom(task.questions.medium, 5),
+        ...takeRandom(task.questions.hard, 5),
     ].map((question, index) => shuffleQuestion({...question, level: index + 1}));
 
     game = {
-        task: staticGame,
+        task,
         player,
         questions: selected,
         current: 0,
@@ -97,7 +106,7 @@ function renderGame() {
             <div class="panel">
                 <div class="game-head">
                     <div>
-                        <p class="eyebrow">${escapeHtml(game.task.title)}</p>
+                        <p class="eyebrow">${escapeHtml(game.task.id)} - ${escapeHtml(game.task.title)}</p>
                         <h1>${finished ? 'Mäng lõppes' : `Küsimus ${game.current + 1} / 15`}</h1>
                     </div>
                     <div class="score">
@@ -264,7 +273,7 @@ function renderLeaderboard(rows) {
                         <div class="leaderboard-row">
                             <span class="rank">${index + 1}</span>
                             <strong>${escapeHtml(row.player)}</strong>
-                            <span>${escapeHtml(row.taskTitle)}</span>
+                            <span>${escapeHtml(row.taskId)} - ${escapeHtml(row.taskTitle)}</span>
                             <span>${formatPoints(row.points)} punkti</span>
                         </div>
                     `).join('')}
@@ -311,19 +320,6 @@ function shuffle(items) {
     return items;
 }
 
-function combinedQuestions() {
-    return bank.tasks.reduce((all, task) => {
-        all.easy.push(...task.questions.easy);
-        all.medium.push(...task.questions.medium);
-        all.hard.push(...task.questions.hard);
-        return all;
-    }, {easy: [], medium: [], hard: []});
-}
-
-function questionCount() {
-    const questions = combinedQuestions();
-    return questions.easy.length + questions.medium.length + questions.hard.length;
-}
 
 function difficulty(level) {
     if (level <= 5) {
